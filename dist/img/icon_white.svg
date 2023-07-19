@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="vector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 398.42 382.87">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: BelariusSerif-Bold, 'Belarius Serif';
+        font-size: 216.43px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="b">
+    <text class="cls-1" transform="translate(189.26 301.8)"><tspan x="0" y="0">B</tspan></text>
+  </g>
+  <g id="b-2" data-name="b">
+    <text class="cls-1" transform="translate(209 301.8) rotate(-180) scale(1 -1)"><tspan x="0" y="0">B</tspan></text>
+  </g>
+  <g id="o">
+    <path class="cls-2" d="m232.25,67.68c-5.69,19.24-17.23,26.75-32.62,26.75s-26.83-7.67-32.42-26.75c-.37,0-34.16,0-34.56,0,8.57,36.51,31.95,53.59,67.2,53.59s59.62-16.78,67.68-53.59h-35.28Z"/>
+  </g>
+</svg>

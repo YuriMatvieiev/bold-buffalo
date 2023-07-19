@@ -1,0 +1,645 @@
+//====================================================================================================
+.hero {
+  @include adaptiveValue("padding-top", 130, 40);
+  position: relative;
+  z-index: 2;
+  // .hero__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 70px;
+      @include adaptiveValue("gap", 70, 50);
+    }
+  }
+  // .hero__text
+  &__text {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  // .hero__title
+  &__title {
+    margin-bottom: rem(35);
+  }
+  // .hero__subtitle
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 98, 30);
+
+    max-width: 700px;
+  }
+  // .hero__black-text
+  &__black-text {
+    font-family: "Brandon Grotesque";
+    padding: 10px 30px;
+    line-height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: rem(15);
+    @include adaptiveValue("font-size", 15, 18);
+    @media (max-width: $mobile) {
+      padding: 10px 20px;
+    }
+  }
+  // .hero__right
+  &__right {
+    position: relative;
+    @media (max-width: $tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media (max-width: $mobileSmall) {
+      justify-content: center;
+    }
+  }
+  &__play-button {
+    margin-right: 70px;
+    margin-top: 25px;
+    @include adaptiveValue("margin-right", 70, 0, 0, 1600, 991.98);
+    @include adaptiveValue("margin-top", 30, 0, 0, 1600, 991.98);
+    @include adaptiveValue("width", 232, 150);
+    cursor: pointer;
+  }
+  &__small-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 68px;
+    @media (max-width: $tablet) {
+      position: static;
+    }
+    @media (max-width: $mobileSmall) {
+      display: none;
+    }
+  }
+}
+
+//====================================================================================================
+
+.advantage {
+  position: relative;
+  @include adaptiveValue("padding-top", 340, 40);
+  // .advantage__cover
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-46%, 10%);
+    color: #f6f6f6;
+    @include adaptiveValue("font-size", 520, 65);
+    line-height: 55%;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    z-index: 1;
+  }
+  // .advantage__container
+  &__container {
+    z-index: 2;
+    position: relative;
+  }
+  // .advantage__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 110, 20);
+    margin-bottom: rem(50);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  // .advantage__title
+  &__title {
+  }
+  // .advantage__right
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    @include adaptiveValue("gap", 180, 40, 0, 1600, 767.98);
+  }
+  // .advantage__desc
+  &__desc {
+  }
+  &__small-logo {
+    width: 68px;
+    align-self: flex-end;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  // .advantage__slider
+  &__slider {
+  }
+  // .advantage__wrapper
+  &__wrapper {
+  }
+  // .advantage__slide
+  &__slide {
+    @include adaptiveValue("max-width", 500, 250);
+    padding: 50px 20px 50px 20px;
+    height: 100%;
+    width: 100%;
+
+    @media (max-width: $mobile) {
+      padding: 30px 20px;
+      height: auto;
+    }
+    @media (max-width: $mobileSmall) {
+      max-width: 100%;
+    }
+    p {
+      font-size: 18px;
+      @include adaptiveValue("font-size", 18, 14);
+      @include adaptiveValue("line-height", 28, 18);
+      line-height: 28px;
+      font-weight: 600;
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 15);
+      }
+    }
+  }
+  // .advantage__slide-title
+  &__slide-title {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 35, 18);
+    line-height: 100%;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    @include adaptiveValue("margin-bottom", 35, 20);
+  }
+}
+//========================================================================================================================================================
+
+.partners {
+  position: relative;
+  @include adaptiveValue("padding-top", 270, 40);
+  // .partners__cover
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-38%, -15%);
+    color: #f6f6f6;
+    @include adaptiveValue("font-size", 520, 65);
+    line-height: 55%;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    z-index: 1;
+    @media (max-width: $mobile) {
+      transform: translate(-38%, 0%);
+    }
+  }
+  // .partners__container
+  &__container {
+    z-index: 2;
+    position: relative;
+    .hero__small-logo {
+      transform: translateY(100%);
+    }
+  }
+  // .partners__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: rem(100);
+    @include adaptiveValue("margin-bottom", 100, 40);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  // .partners__title
+  &__title {
+  }
+  // .partners__right
+  &__right {
+  }
+  // .partners__subtitle
+  &__subtitle {
+    padding-left: 20px;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 20);
+    }
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+  }
+  // .partners__subtitle-black
+  &__subtitle-black {
+    background-color: #2c2c2c;
+    color: #f7f7f1;
+    @include adaptiveValue("margin-bottom", 40, 20);
+    display: inline-block;
+    padding: 10px 20px;
+    @include adaptiveValue("font-size", 47, 14);
+    @include adaptiveValue("line-height", 50, 30);
+    span {
+      font-style: italic;
+    }
+    @media (max-width: $mobile) {
+      padding: 10px;
+    }
+  }
+  // .partners__slider
+  &__slider {
+  }
+  // .partners__wrapper
+  &__wrapper {
+  }
+  // .partners__slide
+  &__slide {
+    max-width: 475px;
+    @include adaptiveValue("max-width", 475, 250);
+    padding: 50px 40px 50px 30px;
+    height: 100%;
+    @media (max-width: $mobile) {
+      padding: 30px 20px;
+      height: auto;
+    }
+    @media (max-width: $mobileSmall) {
+      max-width: unset;
+    }
+    width: 100%;
+    p {
+      font-size: 18px;
+      @include adaptiveValue("font-size", 18, 14);
+      @include adaptiveValue("line-height", 28, 18);
+      line-height: 28px;
+      font-weight: 600;
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 15);
+      }
+    }
+  }
+  // .partners__slide-title
+  &__slide-title {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 35, 18);
+    line-height: 100%;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    @include adaptiveValue("margin-bottom", 35, 20);
+  }
+}
+//========================================================================================================================================================
+
+.invitation {
+  position: relative;
+  @include adaptiveValue("padding-top", 270, 40);
+  // .invitation__cover
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-45%, -10%);
+    color: #f6f6f6;
+    @include adaptiveValue("font-size", 520, 65);
+    line-height: 55%;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    z-index: 1;
+    @media (max-width: $mobile) {
+      transform: translate(-38%, 0%);
+    }
+  }
+  // .invitation__container
+  &__container {
+    z-index: 2;
+    position: relative;
+    .hero__small-logo {
+      transform: translateY(100%);
+    }
+  }
+  // .invitation__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 100, 40);
+    @include adaptiveValue("margin-bottom", 130, 40);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  // .invitation__title
+  &__title {
+    @include adaptiveValue("font-size", 115, 30);
+    line-height: 95%;
+  }
+  // .invitation__subtitle
+  &__subtitle {
+    @include adaptiveValue("font-size", 32, 16);
+    line-height: 145%;
+  }
+  // .invitation__subtitle-black
+  &__subtitle-black {
+    background-color: #2c2c2c;
+    color: #f7f7f1;
+    @include adaptiveValue("margin-bottom", 110, 40);
+    display: inline-block;
+    padding: 10px 20px;
+    @include adaptiveValue("font-size", 44, 14);
+    @include adaptiveValue("line-height", 54, 22);
+  }
+  // .invitation__bottom
+  &__bottom {
+    display: flex;
+    gap: 30px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  // .invitation__bottom-title
+  &__bottom-title {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 400px;
+    @include adaptiveValue("font-size", 35, 20);
+    @media (max-width: $mobile) {
+      max-width: unset;
+    }
+  }
+  // .invitation__bottom-subtitle
+  &__bottom-subtitle {
+    line-height: 28px;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 18, 14);
+  }
+}
+//========================================================================================================================================================
+
+.about {
+  position: relative;
+  @include adaptiveValue("padding-top", 340, 60);
+  // .about__cover
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    color: #f6f6f6;
+    @include adaptiveValue("font-size", 520, 100);
+    line-height: 55%;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    z-index: 1;
+  }
+  // .about__container
+  &__container {
+    z-index: 2;
+    position: relative;
+  }
+  // .about__header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 125, 40);
+    @include adaptiveValue("margin-bottom", 115, 40);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  // .about__title
+  &__title {
+  }
+  // .about__right
+  &__right {
+  }
+  // .about__subtitle
+  &__subtitle {
+    @include adaptiveValue("font-size", 40, 16);
+    margin-bottom: 35px;
+  }
+  // .about__subtitle-black
+  &__subtitle-black {
+    font-weight: 600;
+    padding: 10px 20px;
+    @include adaptiveValue("font-size", 32, 16);
+    @include adaptiveValue("line-height", 45, 22);
+    background-color: #2c2c2c;
+    color: #f7f7f1;
+    display: inline-block;
+  }
+  // .about__bottom
+  &__bottom {
+    display: flex;
+    gap: 230px;
+    @media (max-width: 1600px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  // .about__bottom-left
+  &__bottom-left {
+    max-width: 555px;
+    @media (max-width: 1600px) {
+      max-width: unset;
+    }
+    p {
+      font-size: 16px;
+      line-height: 28px;
+      @include adaptiveValue("line-height", 28, 20);
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  // .about__bottom-left-title
+  &__bottom-left-title {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 35, 18);
+    @include adaptiveValue("line-height", 40, 24);
+    @include adaptiveValue("margin-bottom", 35, 20);
+    text-transform: uppercase;
+  }
+  // .about__bottom-right
+  &__bottom-right {
+  }
+  // .about__item
+  &__item {
+    display: flex;
+    gap: 20px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(110);
+      @media (max-width: $mobile) {
+        margin-bottom: rem(40);
+      }
+    }
+  }
+  // .about__item-people
+  &__item-people {
+    flex: 1 0 200px;
+    @media (max-width: $mobile) {
+      flex: auto;
+    }
+  }
+  // .about__item-people-name
+  &__item-people-name {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    text-transform: uppercase;
+  }
+  // .about__item-people-job
+  &__item-people-job {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    border-left: 1px solid #a8a8a8;
+    padding-left: 5px;
+  }
+  // .about__item-desc
+  &__item-desc {
+    p {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.games {
+  position: relative;
+  @include adaptiveValue("padding-top", 375, 60);
+  @include adaptiveValue("padding-bottom", 200, 40);
+  // .games__cover
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-45%, 20%);
+    color: #f6f6f6;
+    @include adaptiveValue("font-size", 520, 100);
+    line-height: 55%;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    z-index: 1;
+    white-space: nowrap;
+  }
+  // .games__container
+  &__container {
+    z-index: 2;
+    position: relative;
+  }
+  // .games__top
+  &__top {
+    position: relative;
+    display: flex;
+    @include adaptiveValue("gap", 100, 40, 0, 1600, 991.98);
+    @include adaptiveValue("margin-bottom", 340, 40);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      margin-bottom: rem(60);
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: rem(40);
+    }
+    .hero__small-logo {
+      @include adaptiveValue("bottom", -165, -100, 0, 1600, 991.98);
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+  // .games__title
+  &__title {
+    width: 100%;
+    @include adaptiveValue("max-width", 830, 480, 0, 1600, 991.98);
+    flex: none;
+    @media (max-width: $tablet) {
+      max-width: unset;
+    }
+  }
+  // .games__subtitle
+  &__subtitle {
+  }
+  // .games__bottom
+  &__bottom {
+    display: flex;
+    gap: 20px;
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
+  }
+  // .games__item
+  &__item {
+    @include adaptiveValue("padding", 30, 10);
+    width: 330px;
+    transition:
+      background-color,
+      color 0.3s ease 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    @media (max-width: $tablet) {
+      width: calc(100% / 2 - 10px);
+    }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #2c2c2c;
+        color: #f7f7f1;
+        .games__item-name {
+          &::after {
+            border-top-color: #f7f7f1;
+            border-right-color: #f7f7f1;
+          }
+        }
+      }
+    }
+  }
+  // .games__item-name
+  &__item-name {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 38, 24);
+    text-transform: uppercase;
+    line-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+    &::after {
+      content: "";
+      border: 6px solid transparent;
+      border-top: 6px solid #2c2c2c;
+      border-right: 6px solid #2c2c2c;
+      display: inline-block;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  // .games__item-busines
+  &__item-busines {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 22, 16);
+    @include adaptiveValue("line-height", 28, 22);
+  }
+}

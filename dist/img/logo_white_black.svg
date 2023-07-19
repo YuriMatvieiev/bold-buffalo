@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="vector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1434.87 293.42">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 79.24px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-family: BelariusSerif-Bold, 'Belarius Serif';
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 216.43px;
+      }
+
+      .cls-3 {
+        font-size: 135.63px;
+      }
+
+      .cls-4 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="b">
+    <text class="cls-2" transform="translate(546.88 234.12)"><tspan x="0" y="0">B</tspan></text>
+  </g>
+  <g id="b-2" data-name="b">
+    <text class="cls-2" transform="translate(566.63 234.12) rotate(-180) scale(1 -1)"><tspan x="0" y="0">B</tspan></text>
+  </g>
+  <g id="BOLD_BUFFALO" data-name="BOLD             BUFFALO">
+    <text class="cls-3" transform="translate(0 208.56)"><tspan x="0" y="0" xml:space="preserve">BOLD             BUFFALO</tspan></text>
+  </g>
+  <g id="_" data-name="®">
+    <text class="cls-1" transform="translate(1369.62 143.54)"><tspan x="0" y="0">® </tspan></text>
+  </g>
+  <g id="o">
+    <path class="cls-4" d="m589.87,0c-5.69,19.24-17.23,26.75-32.62,26.75s-26.83-7.67-32.42-26.75c-.37,0-34.16,0-34.56,0,8.57,36.51,31.95,53.59,67.2,53.59s59.62-16.78,67.68-53.59h-35.28Z"/>
+  </g>
+</svg>

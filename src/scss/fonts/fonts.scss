@@ -1,0 +1,113 @@
+/* @font-face {
+	font-family: Belarius Serif Sb Oblique;
+	font-display: swap;
+	src: url("../fonts/Belarius Serif Sb Oblique.woff2") format("woff2"), url("../fonts/Belarius Serif Sb Oblique.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Belarius;
+	font-display: swap;
+	src: url("../fonts/Belarius-Bold.woff2") format("woff2"), url("../fonts/Belarius-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: Belarius;
+	font-display: swap;
+	src: url("../fonts/Belarius-Semibold.woff2") format("woff2"), url("../fonts/Belarius-Semibold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: Brandon Grotesque;
+	font-display: swap;
+	src: url("../fonts/Brandon Grotesque-Regular.woff2") format("woff2"), url("../fonts/Brandon Grotesque-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Brandon Grotesque;
+	font-display: swap;
+	src: url("../fonts/Brandon Grotesque-Black.woff2") format("woff2"), url("../fonts/Brandon Grotesque-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: Brandon Grotesque;
+	font-display: swap;
+	src: url("../fonts/Brandon Grotesque-Bold.woff2") format("woff2"), url("../fonts/Brandon Grotesque-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+} */
+
+@import url("https://p.typekit.net/p.css?s=1&k=ixv8uqw&ht=tk&f=10294.10296.49713.49720&a=83350383&app=typekit&e=css");
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src:
+    url("https://use.typekit.net/af/1da05b/0000000000000000000132df/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/1da05b/0000000000000000000132df/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/1da05b/0000000000000000000132df/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src:
+    url("https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Belarius";
+  src:
+    url("https://use.typekit.net/af/4dc6ea/00000000000000007735fb8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/4dc6ea/00000000000000007735fb8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/4dc6ea/00000000000000007735fb8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Belarius";
+  src:
+    url("https://use.typekit.net/af/e7148b/00000000000000007735fbaa/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/e7148b/00000000000000007735fbaa/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/e7148b/00000000000000007735fbaa/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src:
+    url("../fonts/icons.woff2") format("woff2"),
+    url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
