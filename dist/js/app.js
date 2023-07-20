@@ -3173,5 +3173,27 @@
             }));
         }
     }), 0);
+    const lineElement = document.querySelector(".line-element");
+    function updateLineElementHeight() {
+        const scrollPosition = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const minHeight = 100;
+        const maxHeight = 700;
+        const scrollPercentage = Math.min(scrollPosition / (documentHeight - viewportHeight), 1);
+        const newHeight = minHeight + scrollPercentage * (maxHeight - minHeight);
+        lineElement.style.height = `${newHeight}px`;
+    }
+    window.addEventListener("load", updateLineElementHeight);
+    window.addEventListener("scroll", updateLineElementHeight);
+    const script_textarea = document.getElementById("messageInput");
+    if (script_textarea) {
+        function autoResizeTextarea() {
+            script_textarea.style.height = "auto";
+            script_textarea.style.height = script_textarea.scrollHeight + "px";
+        }
+        script_textarea.addEventListener("input", autoResizeTextarea);
+        autoResizeTextarea();
+    }
     isWebp();
 })();

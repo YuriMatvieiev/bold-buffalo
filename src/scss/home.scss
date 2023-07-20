@@ -659,3 +659,128 @@
     @include adaptiveValue("line-height", 28, 22);
   }
 }
+
+//========================================================================================================================================================
+.contact-page {
+  .line {
+    @include adaptiveValue("padding-top", 125, 40);
+    @include adaptiveValue("padding-bottom", 200, 40);
+  }
+}
+.contact {
+  @include adaptiveValue("padding-top", 125, 40);
+  @include adaptiveValue("padding-bottom", 200, 40);
+  position: relative;
+  // .contact__container
+  &__cover {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-45%, 50%);
+    color: #f6f6f6;
+    @include adaptiveValue("font-size", 520, 100);
+    line-height: 55%;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    z-index: 1;
+    white-space: nowrap;
+    background-color: #fff;
+  }
+  &__container {
+    position: relative;
+  }
+  // .contact__content
+  &__content {
+    max-width: 900px;
+    .hero__small-logo {
+      @media (max-width: $pc) {
+        display: none;
+      }
+    }
+  }
+  // .contact__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 30);
+  }
+  // .contact__subtitle
+  &__subtitle {
+    margin-bottom: rem(45);
+  }
+  // .contact__form
+  &__form {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+  }
+  // .contact__item
+  &__item {
+    gap: 20px;
+    display: flex;
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      gap: 10px;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+    &:last-of-type {
+      margin-bottom: rem(15);
+    }
+  }
+  // .contact__label
+  &__label {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 80px;
+    width: 100%;
+  }
+  // .contact__input
+  &__input {
+    border-bottom: 1px solid #cfcfcf;
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0 10px 5px 10px;
+    transition: border-bottom 0.3s ease 0s;
+    overflow-y: hidden;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid #000;
+    }
+  }
+  // .contact__button
+  &__button {
+    padding: 10px 60px;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-bottom: rem(85);
+    align-self: flex-end;
+    transition: background-color 0.3s ease 0s;
+    @media (max-width: $mobileSmall) {
+      padding: 10px 20px;
+      width: 100%;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #4b4a4a;
+      }
+    }
+  }
+  // .contact__desc
+  &__desc {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+}

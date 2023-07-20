@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230720152928">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230720174356">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +21,50 @@
 			</div>
 		</header>
 
-		<main class="page">
-
+		<main class="page contact-page">
+			<div class="page__wrap">
+				<div class="line">
+					<div class="line-element"></div>
+				</div>
+				<section class="contact">
+					<div class="contact__cover">CONTACT US</div>
+					<div class="contact__container">
+						<div class="contact__content">
+							<h1 class="contact__title title">Contact Us</h1>
+							<h2 class="contact__subtitle subtitle">
+								Please fill out the form below and we'll get back to you.
+							</h2>
+							<form action="" class="contact__form">
+								<div class="contact__item">
+									<label class="contact__label" for="name">Name</label>
+									<input required class="contact__input" type="text" name="name" id="" />
+								</div>
+								<div class="contact__item">
+									<label class="contact__label" for="email">Email</label>
+									<input required class="contact__input" type="email" name="email" id="" />
+								</div>
+								<div class="contact__item">
+									<label class="contact__label" for="subject">Subject</label>
+									<input required class="contact__input" type="text" name="subject" id="" />
+								</div>
+								<div class="contact__item">
+									<label class="contact__label" for="message">Message</label>
+									<textarea required class="contact__input" name="message" id="messageInput" cols="30" rows="1" maxlength="300"></textarea>
+								</div>
+								<button type="submit" class="contact__button">
+									Send Message
+								</button>
+							</form>
+							<div class="contact__desc">
+								Bold Buffalo is a mobile game studio specialized in building
+								unique, high-quality mobile games tailored to YouTube content
+								creators audiences.
+							</div>
+							<picture><source srcset="img/icon_black.webp" type="image/webp"><img class="hero__small-logo" src="img/icon_black.png" alt="Bold Buffalo logo" /></picture>
+						</div>
+					</div>
+				</section>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -43,7 +85,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230720152928"></script>
+	<script src="js/app.min.js?_v=20230720174356"></script>
 </body>
 
 </html>

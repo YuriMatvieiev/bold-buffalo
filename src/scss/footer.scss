@@ -2,6 +2,8 @@
 .footer {
   @include adaptiveValue("padding-top", 50, 30);
   @include adaptiveValue("padding-bottom", 50, 30);
+  position: relative;
+  z-index: 2;
   // .footer__container
   &__container {
     display: flex;
