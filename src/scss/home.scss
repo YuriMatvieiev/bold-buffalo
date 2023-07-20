@@ -102,6 +102,7 @@
     font-family: "Brandon Grotesque";
     font-weight: 700;
     z-index: 1;
+    background-color: #fff !important;
   }
   // .advantage__container
   &__container {
@@ -198,6 +199,7 @@
     font-family: "Brandon Grotesque";
     font-weight: 700;
     z-index: 1;
+    background-color: #fff;
     @media (max-width: $mobile) {
       transform: translate(-38%, 0%);
     }
@@ -317,6 +319,7 @@
     font-family: "Brandon Grotesque";
     font-weight: 700;
     z-index: 1;
+    background-color: #fff;
     @media (max-width: $mobile) {
       transform: translate(-38%, 0%);
     }
@@ -406,6 +409,7 @@
     font-family: "Brandon Grotesque";
     font-weight: 700;
     z-index: 1;
+    background-color: #fff;
   }
   // .about__container
   &__container {
@@ -551,6 +555,7 @@
     font-weight: 700;
     z-index: 1;
     white-space: nowrap;
+    background-color: #fff;
   }
   // .games__container
   &__container {
