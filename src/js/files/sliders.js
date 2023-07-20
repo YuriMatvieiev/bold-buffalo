@@ -47,7 +47,11 @@ function initSliders() {
       loop: true,
       //preloadImages: false,
       //lazy: true,
-      autoplay: true,
+      slideToClickedSlide: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
       /*
 			// Ефекти
 			effect: 'fade',
@@ -80,9 +84,11 @@ function initSliders() {
         320: {
           spaceBetween: 10,
           autoHeight: true,
+          autoplay: false,
         },
         640: {
           spaceBetween: 20,
+          autoplay: false,
         },
         768: {
           spaceBetween: 50,
@@ -114,6 +120,7 @@ function initSliders() {
       //preloadImages: false,
       //lazy: true,
       autoplay: false,
+      slideToClickedSlide: true,
       /*
 			// Ефекти
 			effect: 'fade',

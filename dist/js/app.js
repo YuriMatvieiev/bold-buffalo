@@ -3113,14 +3113,20 @@
             speed: 800,
             delay: 5e3,
             loop: true,
-            autoplay: true,
+            slideToClickedSlide: true,
+            autoplay: {
+                delay: 5e3,
+                disableOnInteraction: true
+            },
             breakpoints: {
                 320: {
                     spaceBetween: 10,
-                    autoHeight: true
+                    autoHeight: true,
+                    autoplay: false
                 },
                 640: {
-                    spaceBetween: 20
+                    spaceBetween: 20,
+                    autoplay: false
                 },
                 768: {
                     spaceBetween: 50,
@@ -3138,6 +3144,7 @@
             delay: 5e3,
             loop: true,
             autoplay: false,
+            slideToClickedSlide: true,
             breakpoints: {
                 320: {
                     spaceBetween: 10,
