@@ -7,7 +7,11 @@
       <main class="page">
         <div class="page__wrap">
           <div class="line">
-            <div class="line-element"></div>
+            <div
+              data-min-height="100"
+              data-max-height="700"
+              class="line-element"
+            ></div>
           </div>
           <section class="hero">
             <div class="hero__container">
@@ -26,11 +30,9 @@
                 </div>
               </div>
               <div class="hero__right">
-                <img
-                  class="hero__play-button"
-                  src="@img/button-play.png"
-                  alt="Play Video"
-                />
+                <button class="hero__play-button">
+                  <img src="@img/button-play.png" alt="Play Video" />
+                </button>
                 <img
                   class="hero__small-logo"
                   src="@img/icon_black.png"
@@ -657,6 +659,19 @@
         </div>
       </main>
       @@include('html/_footer.htm',{})
+    </div>
+    <div class="video-overlay" id="videoOverlay">
+      <button
+        class="video-overlay__close-button _icon-clear"
+        id="closeButton"
+      ></button>
+      <video class="video-player" controls>
+        <source
+          src="https://boldbuffalo.s3.amazonaws.com/BoldBuffaloVideo.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
     </div>
     @@include('html/_js.htm',{})
   </body>

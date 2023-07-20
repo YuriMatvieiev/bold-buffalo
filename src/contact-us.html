@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="en">
-  @@include('html/_head.htm',{ "title":"Bold Buffalo" })
+  @@include('html/_head.htm',{ "title":"Contact Us" })
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
       <main class="page contact-page">
         <div class="page__wrap">
           <div class="line">
-            <div class="line-element"></div>
+            <div
+              data-min-height="100"
+              data-max-height="500"
+              class="line-element"
+            ></div>
           </div>
           <section class="contact">
             <div class="contact__cover">CONTACT US</div>
@@ -17,52 +21,62 @@
                 <h2 class="contact__subtitle subtitle">
                   Please fill out the form below and we'll get back to you.
                 </h2>
-                <form action="" class="contact__form">
-                  <div class="contact__item">
-                    <label class="contact__label" for="name">Name</label>
-                    <input
-                      required
-                      class="contact__input"
-                      type="text"
-                      name="name"
-                      id=""
-                    />
+                <form action="" class="contact__form" id="contactForm">
+                  <div class="contact__form-content">
+                    <div class="contact__item">
+                      <label class="contact__label" for="name">Name</label>
+                      <input
+                        required
+                        class="contact__input"
+                        type="text"
+                        name="name"
+                        id=""
+                      />
+                    </div>
+                    <div class="contact__item">
+                      <label class="contact__label" for="email">Email</label>
+                      <input
+                        required
+                        class="contact__input"
+                        type="email"
+                        name="email"
+                        id=""
+                      />
+                    </div>
+                    <div class="contact__item">
+                      <label class="contact__label" for="subject"
+                        >Subject</label
+                      >
+                      <input
+                        required
+                        class="contact__input"
+                        type="text"
+                        name="subject"
+                        id=""
+                      />
+                    </div>
+                    <div class="contact__item">
+                      <label class="contact__label" for="message"
+                        >Message</label
+                      >
+                      <textarea
+                        required
+                        class="contact__input"
+                        name="message"
+                        id="messageInput"
+                        cols="30"
+                        rows="1"
+                        maxlength="300"
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="contact__button">
+                      Send Message
+                    </button>
                   </div>
-                  <div class="contact__item">
-                    <label class="contact__label" for="email">Email</label>
-                    <input
-                      required
-                      class="contact__input"
-                      type="email"
-                      name="email"
-                      id=""
-                    />
+                  <div class="contact__form-subtitle subtitle">
+                    <p>Your message has been sent.</p>
+                    <p>Thank you for getting in touch.</p>
                   </div>
-                  <div class="contact__item">
-                    <label class="contact__label" for="subject">Subject</label>
-                    <input
-                      required
-                      class="contact__input"
-                      type="text"
-                      name="subject"
-                      id=""
-                    />
-                  </div>
-                  <div class="contact__item">
-                    <label class="contact__label" for="message">Message</label>
-                    <textarea
-                      required
-                      class="contact__input"
-                      name="message"
-                      id="messageInput"
-                      cols="30"
-                      rows="1"
-                      maxlength="300"
-                    ></textarea>
-                  </div>
-                  <button type="submit" class="contact__button">
-                    Send Message
-                  </button>
                 </form>
                 <div class="contact__desc">
                   Bold Buffalo is a mobile game studio specialized in building

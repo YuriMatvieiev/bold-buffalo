@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230720174356">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230721011108">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
 		<main class="page">
 			<div class="page__wrap">
 				<div class="line">
-					<div class="line-element"></div>
+					<div data-min-height="100" data-max-height="700" class="line-element"></div>
 				</div>
 				<section class="hero">
 					<div class="hero__container">
@@ -43,7 +43,9 @@
 							</div>
 						</div>
 						<div class="hero__right">
-							<picture><source srcset="img/button-play.webp" type="image/webp"><img class="hero__play-button" src="img/button-play.png" alt="Play Video" /></picture>
+							<button class="hero__play-button">
+								<picture><source srcset="img/button-play.webp" type="image/webp"><img src="img/button-play.png" alt="Play Video" /></picture>
+							</button>
 							<picture><source srcset="img/icon_black.webp" type="image/webp"><img class="hero__small-logo" src="img/icon_black.png" alt="Bold Buffalo logo" /></picture>
 						</div>
 					</div>
@@ -645,14 +647,21 @@
 					<ul class="footer__list">
 						<li><a href="contact-us.html">Contact Us</a></li>
 						<li><a href="privacy-policy.html">Privacy Policy</a></li>
-						<li><a href="legal-notice">Legal Notice</a></li>
+						<li><a href="legal-notice.html">Legal Notice</a></li>
 					</ul>
 				</nav>
 			</div>
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230720174356"></script>
+	<div class="video-overlay" id="videoOverlay">
+		<button class="video-overlay__close-button _icon-clear" id="closeButton"></button>
+		<video class="video-player" controls>
+			<source src="https://boldbuffalo.s3.amazonaws.com/BoldBuffaloVideo.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<script src="js/app.min.js?_v=20230721011108"></script>
 </body>
 
 </html>

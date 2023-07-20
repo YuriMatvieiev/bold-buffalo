@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<title>Bold Buffalo</title>
+	<title>Contact Us</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230720174356">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230721011108">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
 		<main class="page contact-page">
 			<div class="page__wrap">
 				<div class="line">
-					<div class="line-element"></div>
+					<div data-min-height="100" data-max-height="500" class="line-element"></div>
 				</div>
 				<section class="contact">
 					<div class="contact__cover">CONTACT US</div>
@@ -34,26 +34,32 @@
 							<h2 class="contact__subtitle subtitle">
 								Please fill out the form below and we'll get back to you.
 							</h2>
-							<form action="" class="contact__form">
-								<div class="contact__item">
-									<label class="contact__label" for="name">Name</label>
-									<input required class="contact__input" type="text" name="name" id="" />
+							<form action="" class="contact__form" id="contactForm">
+								<div class="contact__form-content">
+									<div class="contact__item">
+										<label class="contact__label" for="name">Name</label>
+										<input required class="contact__input" type="text" name="name" id="" />
+									</div>
+									<div class="contact__item">
+										<label class="contact__label" for="email">Email</label>
+										<input required class="contact__input" type="email" name="email" id="" />
+									</div>
+									<div class="contact__item">
+										<label class="contact__label" for="subject">Subject</label>
+										<input required class="contact__input" type="text" name="subject" id="" />
+									</div>
+									<div class="contact__item">
+										<label class="contact__label" for="message">Message</label>
+										<textarea required class="contact__input" name="message" id="messageInput" cols="30" rows="1" maxlength="300"></textarea>
+									</div>
+									<button type="submit" class="contact__button">
+										Send Message
+									</button>
 								</div>
-								<div class="contact__item">
-									<label class="contact__label" for="email">Email</label>
-									<input required class="contact__input" type="email" name="email" id="" />
+								<div class="contact__form-subtitle subtitle">
+									<p>Your message has been sent.</p>
+									<p>Thank you for getting in touch.</p>
 								</div>
-								<div class="contact__item">
-									<label class="contact__label" for="subject">Subject</label>
-									<input required class="contact__input" type="text" name="subject" id="" />
-								</div>
-								<div class="contact__item">
-									<label class="contact__label" for="message">Message</label>
-									<textarea required class="contact__input" name="message" id="messageInput" cols="30" rows="1" maxlength="300"></textarea>
-								</div>
-								<button type="submit" class="contact__button">
-									Send Message
-								</button>
 							</form>
 							<div class="contact__desc">
 								Bold Buffalo is a mobile game studio specialized in building
@@ -78,14 +84,14 @@
 					<ul class="footer__list">
 						<li><a href="contact-us.html">Contact Us</a></li>
 						<li><a href="privacy-policy.html">Privacy Policy</a></li>
-						<li><a href="legal-notice">Legal Notice</a></li>
+						<li><a href="legal-notice.html">Legal Notice</a></li>
 					</ul>
 				</nav>
 			</div>
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230720174356"></script>
+	<script src="js/app.min.js?_v=20230721011108"></script>
 </body>
 
 </html>

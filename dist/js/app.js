@@ -3173,13 +3173,13 @@
             }));
         }
     }), 0);
-    const lineElement = document.querySelector(".line-element");
     function updateLineElementHeight() {
+        const lineElement = document.querySelector(".line-element");
         const scrollPosition = window.scrollY;
         const viewportHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
-        const minHeight = 100;
-        const maxHeight = 700;
+        const minHeight = parseInt(lineElement.getAttribute("data-min-height"), 10);
+        const maxHeight = parseInt(lineElement.getAttribute("data-max-height"), 10);
         const scrollPercentage = Math.min(scrollPosition / (documentHeight - viewportHeight), 1);
         const newHeight = minHeight + scrollPercentage * (maxHeight - minHeight);
         lineElement.style.height = `${newHeight}px`;
@@ -3195,5 +3195,42 @@
         script_textarea.addEventListener("input", autoResizeTextarea);
         autoResizeTextarea();
     }
+    const script_form = document.getElementById("contactForm");
+    const formContent = document.querySelector(".contact__form-content");
+    const formSubtitle = document.querySelector(".contact__form-subtitle");
+    if (script_form) {
+        function handleSubmit(event) {
+            event.preventDefault();
+            formContent.style.display = "none";
+            formSubtitle.style.display = "block";
+        }
+        script_form.addEventListener("submit", handleSubmit);
+    }
+    const heroPlayButton = document.querySelector(".hero__play-button");
+    const pageWrap = document.querySelector(".wrapper");
+    const videoOverlay = document.getElementById("videoOverlay");
+    const closeButton = document.getElementById("closeButton");
+    const videoPlayer = document.querySelector(".video-player");
+    heroPlayButton.addEventListener("click", (() => {
+        pageWrap.classList.add("shifted");
+        videoOverlay.style.display = "block";
+        setTimeout((() => {
+            videoOverlay.classList.add("active");
+            videoPlayer.play();
+        }), 50);
+    }));
+    closeButton.addEventListener("click", (() => {
+        pageWrap.classList.remove("shifted");
+        videoOverlay.classList.remove("active");
+        setTimeout((() => {
+            videoOverlay.style.display = "none";
+            videoPlayer.pause();
+        }), 500);
+    }));
+    videoPlayer.addEventListener("webkitendfullscreen", (() => {
+        videoOverlay.style.display = "none";
+        videoPlayer.pause();
+        pageWrap.classList.remove("shifted");
+    }));
     isWebp();
 })();

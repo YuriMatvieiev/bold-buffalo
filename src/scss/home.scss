@@ -9,7 +9,6 @@
     justify-content: space-between;
     @media (max-width: $tablet) {
       flex-direction: column;
-      gap: 70px;
       @include adaptiveValue("gap", 70, 50);
     }
   }
@@ -63,7 +62,9 @@
     @include adaptiveValue("width", 232, 150);
     transition: transform 1s ease;
     cursor: pointer;
-
+    img {
+      width: 100%;
+    }
     @media (any-hover: hover) {
       &:hover {
         transform: rotate(360deg);
@@ -689,6 +690,7 @@
   }
   &__container {
     position: relative;
+    z-index: 2;
   }
   // .contact__content
   &__content {
@@ -710,6 +712,9 @@
   // .contact__form
   &__form {
     width: 100%;
+    @include adaptiveValue("margin-bottom", 85, 40);
+  }
+  &__form-content {
     flex-direction: column;
     display: flex;
   }
@@ -759,7 +764,7 @@
     font-size: 20px;
     line-height: 35px;
     text-transform: uppercase;
-    margin-bottom: rem(85);
+
     align-self: flex-end;
     transition: background-color 0.3s ease 0s;
     @media (max-width: $mobileSmall) {
@@ -769,6 +774,17 @@
     @media (any-hover: hover) {
       &:hover {
         background-color: #4b4a4a;
+      }
+    }
+  }
+  &__form-subtitle {
+    display: none;
+    margin-top: rem(40);
+
+    margin-bottom: rem(40);
+    p {
+      &:not(:last-child) {
+        margin-bottom: rem(8);
       }
     }
   }
@@ -783,4 +799,213 @@
     padding: 10px 20px;
     display: inline-block;
   }
+}
+
+//========================================================================================================================================================
+
+.notice-head {
+  @include adaptiveValue("padding-top", 125, 40);
+
+  // .notice-head__container
+  &__container {
+    position: relative;
+    .hero__small-logo {
+      @media (max-width: $pc) {
+        display: none;
+      }
+    }
+  }
+  // .notice-head__title
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 40);
+  }
+  // .notice-head__date
+  &__date {
+    @include adaptiveValue("font-size", 25, 18);
+    line-height: 100%;
+    @include adaptiveValue("margin-bottom", 60, 40);
+  }
+  // .notice-head__subtitle
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 200, 40);
+  }
+  &__black-text {
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+  }
+}
+
+//========================================================================================================================================================
+.legal-notice {
+  .line {
+    @include adaptiveValue("padding-top", 125, 40);
+    @include adaptiveValue("padding-bottom", 200, 40);
+  }
+}
+.notice-content {
+  position: relative;
+  @include adaptiveValue("padding-bottom", 200, 40);
+  @include adaptiveValue("padding-top", 340, 70);
+  .hero__small-logo {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  // .notice-content__cover
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-40%, 20%);
+    color: #f6f6f6;
+    @include adaptiveValue("font-size", 520, 100);
+    line-height: 55%;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    z-index: 1;
+    white-space: nowrap;
+    background-color: #fff;
+  }
+  // .notice-content__container
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  // .notice-content__wrap
+  &__wrap {
+    &:last-child {
+      .notice-content__item {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // .notice-content__title
+  &__title {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 70, 40);
+    line-height: 100%;
+    text-transform: uppercase;
+    max-width: 500px;
+    width: 100%;
+    @media (max-width: $mobile) {
+      font-size: rem(30);
+    }
+  }
+  &__main-title {
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 70, 30);
+    line-height: 100%;
+    text-transform: uppercase;
+    max-width: 500px;
+    width: 100%;
+  }
+  &__main-subtitle {
+    margin-top: rem(40);
+  }
+  // .notice-content__item
+  &__item {
+    @include adaptiveValue("margin-top", 100, 40);
+
+    display: flex;
+    margin-bottom: rem(40);
+    @include adaptiveValue("gap", 95, 20);
+    &:last-child {
+      @include adaptiveValue("margin-bottom", 195, 40);
+    }
+    @media (max-width: $pc) {
+      flex-direction: column;
+    }
+  }
+  // .notice-content__subtitle
+  &__subtitle {
+    text-transform: uppercase;
+    max-width: 500px;
+    width: 100%;
+    font-family: "Brandon Grotesque";
+    font-weight: 700;
+    line-height: 100%;
+    @include adaptiveValue("font-size", 35, 20);
+  }
+  // .notice-content__text
+  &__text {
+    @include adaptiveValue("font-size", 18, 16);
+    @include adaptiveValue("line-height", 28, 18);
+  }
+  // .notice-content__list
+  &__list {
+    margin-top: rem(30);
+  }
+  &__address {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 43, 16);
+    line-height: 130%;
+    p {
+      &:last-child {
+        margin-top: rem(20);
+        @include adaptiveValue("font-size", 35, 16);
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.video-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: #000;
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 0.8s ease; /* Add transition for smooth appearance */
+}
+
+.video-overlay.active {
+  opacity: 1; /* Set opacity to 1 when the video is active */
+}
+
+.video-overlay__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #cfcfcf;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+  color: #000;
+  &::before {
+    font-size: rem(30);
+  }
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+}
+
+/* Add transition for smooth sliding effect */
+.wrapper {
+  transition: transform 1s ease;
+}
+
+.wrapper.shifted {
+  transform: translateX(-100%);
 }

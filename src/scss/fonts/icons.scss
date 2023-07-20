@@ -15,6 +15,9 @@
   }
 }
 
+._icon-clear:before {
+  content: "\e901";
+}
 ._icon-envelope:before {
   content: "\e900";
 }
