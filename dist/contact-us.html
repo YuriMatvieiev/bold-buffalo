@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230721011108">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230721141759">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,23 +34,23 @@
 							<h2 class="contact__subtitle subtitle">
 								Please fill out the form below and we'll get back to you.
 							</h2>
-							<form action="" class="contact__form" id="contactForm">
+							<form action="files/sendmail/sendmail.php" method="POST" class="contact__form" id="contactForm">
 								<div class="contact__form-content">
 									<div class="contact__item">
 										<label class="contact__label" for="name">Name</label>
-										<input required class="contact__input" type="text" name="name" id="" />
+										<input name="form[name]" required class="contact__input" type="text" name="name" id="" />
 									</div>
 									<div class="contact__item">
 										<label class="contact__label" for="email">Email</label>
-										<input required class="contact__input" type="email" name="email" id="" />
+										<input name="form[email]" required class="contact__input" type="email" name="email" id="" />
 									</div>
 									<div class="contact__item">
 										<label class="contact__label" for="subject">Subject</label>
-										<input required class="contact__input" type="text" name="subject" id="" />
+										<input required name="form[subject]" class="contact__input" type="text" name="subject" id="" />
 									</div>
 									<div class="contact__item">
 										<label class="contact__label" for="message">Message</label>
-										<textarea required class="contact__input" name="message" id="messageInput" cols="30" rows="1" maxlength="300"></textarea>
+										<textarea required name="form[message]" class="contact__input" name="message" id="messageInput" cols="30" rows="1" maxlength="300"></textarea>
 									</div>
 									<button type="submit" class="contact__button">
 										Send Message
@@ -91,7 +91,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230721011108"></script>
+	<script src="js/app.min.js?_v=20230721141759"></script>
 </body>
 
 </html>

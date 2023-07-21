@@ -3211,26 +3211,37 @@
     const videoOverlay = document.getElementById("videoOverlay");
     const closeButton = document.getElementById("closeButton");
     const videoPlayer = document.querySelector(".video-player");
-    heroPlayButton.addEventListener("click", (() => {
-        pageWrap.classList.add("shifted");
-        videoOverlay.style.display = "block";
-        setTimeout((() => {
-            videoOverlay.classList.add("active");
-            videoPlayer.play();
-        }), 50);
-    }));
-    closeButton.addEventListener("click", (() => {
-        pageWrap.classList.remove("shifted");
-        videoOverlay.classList.remove("active");
-        setTimeout((() => {
+    if (heroPlayButton) {
+        heroPlayButton.addEventListener("click", (() => {
+            pageWrap.classList.add("shifted");
+            videoOverlay.style.display = "block";
+            setTimeout((() => {
+                videoOverlay.classList.add("active");
+                videoPlayer.play();
+            }), 50);
+        }));
+        closeButton.addEventListener("click", (() => {
+            pageWrap.classList.remove("shifted");
+            videoOverlay.classList.remove("active");
+            setTimeout((() => {
+                videoOverlay.style.display = "none";
+                videoPlayer.pause();
+            }), 500);
+        }));
+        videoPlayer.addEventListener("webkitendfullscreen", (() => {
             videoOverlay.style.display = "none";
             videoPlayer.pause();
-        }), 500);
-    }));
-    videoPlayer.addEventListener("webkitendfullscreen", (() => {
-        videoOverlay.style.display = "none";
-        videoPlayer.pause();
-        pageWrap.classList.remove("shifted");
-    }));
+            pageWrap.classList.remove("shifted");
+        }));
+        videoPlayer.addEventListener("ended", (() => {
+            videoOverlay.classList.remove("active");
+            setTimeout((() => {
+                videoOverlay.style.display = "none";
+                videoPlayer.pause();
+                videoPlayer.currentTime = 0;
+                pageWrap.classList.remove("shifted");
+            }), 500);
+        }));
+    }
     isWebp();
 })();

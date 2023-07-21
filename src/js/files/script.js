@@ -71,34 +71,51 @@ const videoOverlay = document.getElementById("videoOverlay");
 const closeButton = document.getElementById("closeButton");
 const videoPlayer = document.querySelector(".video-player");
 
-heroPlayButton.addEventListener("click", () => {
-  // Slide the content to the left
-  pageWrap.classList.add("shifted");
-  // Show the video overlay smoothly
-  videoOverlay.style.display = "block";
-  setTimeout(() => {
-    videoOverlay.classList.add("active");
-    // Play the video when the overlay is fully visible
-    videoPlayer.play();
-  }, 50); // Wait a short time before adding the active class for the transition to take effect
-});
+if (heroPlayButton) {
+  heroPlayButton.addEventListener("click", () => {
+    // Slide the content to the left
+    pageWrap.classList.add("shifted");
+    // Show the video overlay smoothly
+    videoOverlay.style.display = "block";
+    setTimeout(() => {
+      videoOverlay.classList.add("active");
+      // Play the video when the overlay is fully visible
+      videoPlayer.play();
+    }, 50); // Wait a short time before adding the active class for the transition to take effect
+  });
 
-closeButton.addEventListener("click", () => {
-  // Slide the content back to its original position
-  pageWrap.classList.remove("shifted");
-  // Hide the video overlay smoothly
-  videoOverlay.classList.remove("active");
-  setTimeout(() => {
+  closeButton.addEventListener("click", () => {
+    // Slide the content back to its original position
+    pageWrap.classList.remove("shifted");
+    // Hide the video overlay smoothly
+    videoOverlay.classList.remove("active");
+    setTimeout(() => {
+      videoOverlay.style.display = "none";
+      // Pause the video when the overlay is fully hidden
+      videoPlayer.pause();
+    }, 500); // Wait for the transition to complete before hiding the overlay
+  });
+
+  // Listen for the webkitendfullscreen event to handle iOS fullscreen player
+  videoPlayer.addEventListener("webkitendfullscreen", () => {
     videoOverlay.style.display = "none";
-    // Pause the video when the overlay is fully hidden
     videoPlayer.pause();
-  }, 500); // Wait for the transition to complete before hiding the overlay
-});
+    // Slide the content back to its original position after the video ends
+    pageWrap.classList.remove("shifted");
+  });
 
-// Listen for the webkitendfullscreen event to handle iOS fullscreen player
-videoPlayer.addEventListener("webkitendfullscreen", () => {
-  videoOverlay.style.display = "none";
-  videoPlayer.pause();
-  // Slide the content back to its original position after the video ends
-  pageWrap.classList.remove("shifted");
-});
+  videoPlayer.addEventListener("ended", () => {
+    // Remove the "active" class to smoothly hide the video overlay
+    videoOverlay.classList.remove("active");
+    setTimeout(() => {
+      // Hide the video overlay after the transition
+      videoOverlay.style.display = "none";
+      // Pause the video
+      videoPlayer.pause();
+      // Reset the video's current time to 0, so it starts from the beginning next time
+      videoPlayer.currentTime = 0;
+      // Slide the content back to its original position after the video ends
+      pageWrap.classList.remove("shifted");
+    }, 500); // Wait for the transition to complete before hiding the overlay
+  });
+}
